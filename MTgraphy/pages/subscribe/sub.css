@@ -1,0 +1,449 @@
+/* 
+https://www.w3schools.com/howto/howto_css_custom_checkbox.asp 
+https://stackoverflow.com/questions/44679332/javascript-change-input-value-when-select-option-is-selected
+*/
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 81%;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu{
+  position: fixed;
+  left: 84%;
+  height: 100%;
+  width: 12.5vw;
+  font-family: 'impact', fantasy;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25vh;
+}
+
+.menu img{
+  width: 100%;
+  text-align: justify;
+  align-self: center;
+}
+
+.menu .frame{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+}
+
+.menu .frame .button{
+  position: relative;
+  width: 200%;
+  height: 9vh;
+  background-color: rgb(255, 255, 255, 0);
+  border-width: 0;
+  transition-duration: 0.5s;
+  font-size: 3vmin;
+  font-weight: 600;
+  align-self: center;
+}
+
+.menu .frame .button-sub{
+  position: relative;
+  margin-top: 10%;
+  width: 128%;
+  height: 6vh;
+  background-color: gainsboro;
+  border-width: 0;
+  border-radius: 10px;
+  left: -12.5%;
+  transition-duration: 0.5s;
+  font-size: 3vmin;
+  font-weight: 700;
+  text-align: center;
+}
+
+.menu .button:hover{
+  background-color: rgb(220, 220, 220);
+}
+
+.menu .button-sub:hover{
+  background-color: gainsboro;
+}
+
+.mainbg{
+  position: absolute;
+  width: 81%;
+  height: 100%;
+  z-index: 5;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 15px;
+  width: 91%;
+  height: 80%;
+  background-color: white;
+  z-index: 10;
+}
+
+.form-container .title{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 2%;
+  width: 100%;
+  gap: 2%;
+  height: auto;
+}
+
+.form-container .title img{
+  width: 140px;
+}
+
+.form-container .title .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container h1{
+  margin-top: 1%;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 4.5vmin;
+}
+
+.form-container h2{
+  margin-top: -1%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 3vmin;
+}
+
+.form-container .horizontal{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  gap: 1%;
+}
+
+.form-container .vertical{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  width: 40%;
+}
+
+.field{
+  padding: 1vh;
+  height: 6vh;
+  width: 24vw;
+  /* background-color: aqua; */
+}
+
+.field input{
+  border-radius: 10px;
+  border-width: 0;
+  background-color: gainsboro;
+  font-size: 2.5vmin;
+  padding-left: 5%;
+  height: 100%;
+  width: 95%;
+}
+
+.field select{
+  border-radius: 10px;
+  border-width: 0;
+  background-color: gainsboro;
+  font-size: 3vmin;
+  padding-left: 5%;
+  height: 100%;
+  width: 100%;
+}
+
+.field-tel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  height: 4.5vh;
+  width: 23vw;
+  padding: 1vh;
+  gap: 5%;
+  margin-top: 1.5%;
+  background-color: gainsboro;
+}
+
+.field-tel h1{
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+  margin-top: 4%;
+  font-size: 2.5vmin;
+}
+
+.field-tel .phone{
+  position: relative;
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border-width: 0;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.tnc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5vmin;
+  margin-top: 5%;
+  font-weight: 600;
+}
+
+.tnc label{
+  margin-left: 2%;
+}
+
+.sub{
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4%;
+  height: 6vh;
+  width: 15%;
+
+  font-size: 3vmin;
+
+  border-width: 0;
+  border-radius: 10px;
+  background-color: rgb(242, 107, 107);
+}
+
+/* @media screen and (max-width: 400px){
+
+}
+@media screen and (min-width: 401px) and (max-width: 600px){
+
+}
+@media screen and (min-width: 601px) and (max-width: 800px){
+
+} */
+
+@media screen and (max-width: 400px){
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .container{
+    height: 50vh;
+  }
+
+  .mainbg{
+    height: 100%;
+  }
+  
+  .form-container{
+    margin-top: 85%;
+    height: 150%;
+  }
+
+  .form-container .title{
+    width: 95%;
+  }
+
+  .form-container .title img{
+    width: 110px;
+  }
+
+  .form-container .horizontal{
+    margin-top: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container .vertical{
+    width: 80%;
+  }
+
+  .field{
+    width: 50vw;
+  }
+
+  .field-tel{
+    width: 45vw;
+  }
+
+  .tnc{
+    margin-top: 40%;
+  }
+
+  .sub{
+    width: 60%;
+    margin-top: 8%;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 600px){
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .container{
+    height: 50vh;
+  }
+
+  .mainbg{
+    height: 100%;
+  }
+  
+  .form-container{
+    margin-top: 85%;
+    height: 150%;
+  }
+
+  .form-container .title{
+    width: 95%;
+  }
+
+  .form-container .title img{
+    width: 110px;
+  }
+
+  .form-container .horizontal{
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container .vertical{
+    width: 80%;
+  }
+
+  .field{
+    width: 50vw;
+  }
+
+  .field-tel{
+    width: 47.5vw;
+  }
+
+  .tnc{
+    margin-top: 20%;
+  }
+
+  .sub{
+    width: 60%;
+    margin-top: 4%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px){
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .container{
+    height: 50vh;
+  }
+
+  .mainbg{
+    height: 100%;
+  }
+  
+  .form-container{
+    margin-top: 65%;
+    height: 150%;
+  }
+
+  .form-container .title{
+    width: 95%;
+  }
+
+  .form-container .title img{
+    width: 110px;
+  }
+
+  .form-container .horizontal{
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container .vertical{
+    width: 80%;
+  }
+
+  .field{
+    width: 50vw;
+  }
+
+  .field-tel{
+    width: 47.5vw;
+  }
+
+  .tnc{
+    margin-top: 15%;
+  }
+
+  .sub{
+    width: 60%;
+    margin-top: 4%;
+  }
+}

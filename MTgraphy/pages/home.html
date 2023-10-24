@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Jomhuria&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jomhuria">
+  <title>MTgraphy</title>
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <img src="../src/logoweb2.png">
+      <div class="frame">
+        <button class="button" onclick="scroll_into('home')">Home</button>
+        <button class="button" onclick="scroll_into('about-us')">About Us</button>
+        <button class="button" onclick="scroll_into('gallery')">Gallery</button>
+        <button class="button"><a class="amen" href="./contact-us/contact_us.html">Contact Us</a></button>
+        <button class="button-sub"><a class="amen" href="./subscribe/sub.html">Subscribe</a></button>
+      </div>
+    </div>
+    <div class="vertical">
+      <div class="home" id="home">
+        <div class="title">
+          <img src="../src/logoweb2.png">
+          <h2>We preserve aspects of life forever.</h2>
+        </div>
+        <div class="solid">
+          <img class='solid-img1' src="../src/favpng_arrow-clip-art.png" onclick="scroll_into('about-us')">
+        </div>
+        <div class="solid-sq">
+          <h2>OUR SERVICES</h2>
+          <div class="framer">
+            <div class="service-frame1">
+              <img class="solid-img1" src="../src/favpng_camera-vector.png" onclick="scroll_into('gallery')">
+              <h3>Photography</h3>
+              <h4>landscape and portrait shots</h4>
+            </div>
+            <div class="service-frame2">
+              <img class='solid-img2' src="../src/—Pngtree—vector printer icon_3782172.png">
+              <h3>Fine Prints</h3>
+              <h4>all sizes photo print</h4>
+            </div>
+          </div>
+        </div>
+        <img class="bg" src="../src/20220503_130012.jpg">
+      </div>
+      <div class="about-us" id="about-us">
+        <div class="frame">
+          <div class="title">
+            <h2>With over 5 years of professional photography experience, we strive for excellence for every work we got.</h2>
+            <h3>From a humble beginning in 2016, we build our reputation the right way with every project. Known for our out-of-the-world landscape photos, we will continue to give our customers the best photos of their life.</h3>
+          </div>
+          <img src="../src/20220513_112024.jpg">
+          <div class="solid"></div>
+        </div>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="frame">
+          <div class="landscape" id="landscape">
+            <div class="button-frame" id="button-frame">
+              <button><a class="agal" href="./gallery/gallery_land.html">view more landscape</a></button>
+            </div>
+            <img class="land" src="../src/20220513_112024.jpg">
+            <img class="land" src="../src/20220503_130012.jpg">
+          </div>
+          <div class="portrait" id="portrait">
+            <div class="button-frame" id="pbutton-frame">
+              <button><a class="agal" href="./gallery/gallery_portrait.html">view more portrait</a></button>
+            </div>
+            <div class="horizontal-pro">
+              <img class="pro" src="../src/jimmy-fermin-bqe0J0b26RQ-unsplash.jpg">
+              <img class="pro" src="../src/jake-nackos-IF9TK5Uy-KI-unsplash.jpg">
+            </div>
+            <div class="horizontal-pro2">
+              <img class="pro1" src="../src/ben-parker-OhKElOkQ3RE-unsplash.jpg">
+              <img class="pro2" src="../src/albert-dera-ILip77SbmOE-unsplash.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./home.js"></script>
+</body>
+</html>

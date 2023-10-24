@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+  <title>MTgraph: Subscribe</title>
+</head>
+<body>
+  <div class="container">
+    <img class="mainbg" src="../../src/sub_background.png">
+    <div class="menu">
+      <img src="../../src/logoweb2.png">
+      <div class="frame">
+        <button class="button"><a href="../home.html">Home</a></button>
+        <button class="button" onclick="about_us()">About Us</button>
+        <button class="button" onclick="gallery()">Gallery</button>
+        <button class="button"><a href="../contact-us/contact_us.html">Contact Us</a></button>
+        <button class="button-sub">Subscribe</button>
+      </div>
+    </div>
+    <div class="form-container">
+      <form name="formRegist" action="./sub_done.html" onsubmit="return validate()">
+        <div class="title">
+          <img src="../../src/logoweb2.png">
+          <div class="text">
+            <h1>Subscribe to MTgraphy</h1>
+            <h2>Subscribe now and receive our exclusive content daily on your email</h2>
+          </div>
+        </div>
+        <div class="horizontal">
+          <div class="vertical">
+            <div class="field">
+              <input type="text" name="name" class="name" placeholder="Name">
+            </div>
+            <div class="field">
+              <input type="email" name="email" class="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="vertical">
+            <div class="field">
+              <select name="country" class="country" id="country" onchange="countryChange(value)">
+                <option disabled selected>Country</option>
+                <option value="my">Malaysia</option>
+                <option value="id">Indonesia</option>
+                <option value="sg">Singapore</option>
+              </select>
+            </div>
+            <div class="field-tel">
+              <h1 id="pcode">+00</h1>
+              <input type="tel" name="tel" class="phone" placeholder="Phone">
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="tnc">
+            <input type="checkbox" name="tnc" class="checkbox">
+            <span class="checkmark"></span>
+            <label for="tnc">I have read the terms and conditions applied.</label>
+          </div>
+          <button type="submit" class="sub">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./sub.js"></script>
+</body>
+</html>

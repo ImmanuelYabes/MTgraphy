@@ -1,0 +1,205 @@
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 81%;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu{
+  position: fixed;
+  left: 84%;
+  height: 100%;
+  width: 12.5vw;
+  font-family: 'impact', fantasy;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25vh;
+}
+
+.menu img{
+  width: 100%;
+  text-align: justify;
+  align-self: center;
+}
+
+.menu .frame{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+}
+
+.menu .frame .button{
+  position: relative;
+  width: 200%;
+  height: 9vh;
+  background-color: rgb(255, 255, 255, 0);
+  border-width: 0;
+  transition-duration: 0.5s;
+  font-size: 3vmin;
+  font-weight: 600;
+  align-self: center;
+}
+
+.menu .frame .button-sub{
+  position: relative;
+  margin-top: 10%;
+  width: 128%;
+  height: 6vh;
+  background-color: gainsboro;
+  border-width: 0;
+  border-radius: 10px;
+  left: -12.5%;
+  transition-duration: 0.5s;
+  font-size: 3vmin;
+  font-weight: 700;
+  text-align: center;
+}
+
+.menu .button:hover{
+  background-color: rgb(220, 220, 220);
+}
+
+.menu .button-sub:hover{
+  background-color: gainsboro;
+}
+
+.mainbg{
+  position: absolute;
+  width: 81%;
+  height: 100%;
+  z-index: 5;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border-radius: 15px;
+  width: 90%;
+  height: 80%;
+  gap: 6%;
+  background-color: white;
+  z-index: 10;
+}
+
+.form-container img{
+  width: 35%;
+  align-self: center;
+}
+
+.form-container h1, h2{
+  justify-self: center;
+  align-self: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-container h1{
+  font-size: 4vmin;
+}
+
+.form-container h2{
+  margin-top: -3.5%;
+  font-weight: 500;
+  font-size: 2.5vmin;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px){
+  .container{
+    height: 50vh;
+  }
+
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .form-container{
+    margin-top: 80%;
+    height: 100%;
+  }
+
+  .form-container h2{
+    font-size: 2.5vmin;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 600px){
+  .container{
+    height: 50vh;
+  }
+
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .form-container{
+    margin-top: 80%;
+    height: 120%;
+  }
+
+  .form-container h2{
+    font-size: 2.5vmin;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px){
+  .container{
+    height: 50vh;
+  }
+
+  .menu{
+    margin-top: 15%;
+    gap: 15vh;
+  }
+
+  .menu img{
+    width: 120%;
+  }
+
+  .menu .frame .button{
+    height: 6vh;
+  }
+
+  .form-container{
+    margin-top: 65%;
+    height: 150%;
+  }
+
+  .form-container h2{
+    font-size: 2.5vmin;
+    text-align: center;
+  }
+}
